@@ -3,7 +3,11 @@ package ohtu.verkkokauppa;
 
 import java.util.ArrayList;
 
-public class Kirjanpito implements KirjanpitoInterface {    
+import org.springframework.stereotype.Component;
+
+@Component
+public class Kirjanpito implements KirjanpitoInterface {
+    
     private ArrayList<String> tapahtumat;
 
     public Kirjanpito() {

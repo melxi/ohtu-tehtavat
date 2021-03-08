@@ -17,6 +17,7 @@ public class Main {
 
         Gson mapper = new Gson();
         Player[] players = mapper.fromJson(bodyText, Player[].class);
+        List<Player> finnishPlayers = new ArrayList<>();
 
         // System.out.println("Oliot:");
         // for (Player player : players) {
@@ -28,8 +29,14 @@ public class Main {
 
         for (Player player : players) {
             if (player.getNationality().equals("FIN")) {
-                System.out.println(player);
+                finnishPlayers.add(player);
             }
-        }   
+        }
+
+        Collections.sort(finnishPlayers);
+
+        for (Player player: finnishPlayers) {
+            System.out.println(player);
+        }
     }
 }

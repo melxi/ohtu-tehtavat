@@ -40,7 +40,39 @@ public class AuthenticationService {
 
     private boolean invalid(String username, String password) {
         // validity check of username and password
+        if (username.length() < 3 || password.length() < 8) {
+            return true;
+        } 
 
+        if (!containsLetters(username)) {
+            return true;
+        }
+        
+        if (!containsDigit(password)) {
+            return true;   
+        }
+
+
+        return false;
+    }
+
+    private boolean containsLetters(String s) {
+        for (char ch : s.toCharArray()) {
+            if ((ch < 'a' || ch > 'z')) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private boolean containsDigit(String s) {
+        for (char ch : s.toCharArray()) {
+            if (Character.isDigit(ch)) {
+                return true;
+            }
+        }
+    
         return false;
     }
 }

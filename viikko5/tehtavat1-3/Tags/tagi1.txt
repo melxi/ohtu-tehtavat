@@ -1,3 +1,5 @@
 tagi1 first commit
 tagi1 second commit
 tagi1 third commit
+
+tiedosto lisätty ja poistettu

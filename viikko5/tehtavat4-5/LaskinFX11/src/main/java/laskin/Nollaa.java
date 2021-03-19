@@ -36,6 +36,8 @@ public class Nollaa extends Komento {
     }
 
     public void peru() {
-
+        sovellus.edellinenTulos();
+        tuloskentta.setText("" + sovellus.tulos());
+        undo.disableProperty().set(true);
     }
 }
